@@ -3,3 +3,26 @@
   max-width: 300px;
   min-height: 300px;
   max-height: 300px;}
+
+.flex-container{
+  background-color:blue;
+  margin-top:15px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.buton-tazz{
+  background:#fc1e22 !important;
+  color: white !important;
+}
+
+.button-foodpanda{
+  background: #d70f64 !important;
+  color: white !important;
+}
+
+.button-glovo{
+  background: #ffc244 !important;
+  color: white !important;
+}
