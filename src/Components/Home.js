@@ -34,8 +34,8 @@ function Home() {
 
     return (
       <div>
-        
-        {users &&
+        <p> sida </p>
+        {/* {users &&
         users.map((user) => (
           <div className="item-container" key={user._id}>
             Id: <b> {user.restaurant} </b>  <br/>
@@ -43,11 +43,11 @@ function Home() {
 
           </div>
         ))
-         } 
+         }  */}
 
 {/* 
-<div className='big-container '>
 <h3>McD</h3>
+<div className='big-container '>
 {meniu[0].map(item=>(
   <div className='flex-container'>
 
@@ -146,7 +146,7 @@ function Home() {
        ))}
 
 
-</div> */}
+</div>  */}
 
 
       </div>

@@ -15,7 +15,7 @@ function McDonalds() {
   const getApiData = async () => {
     const response = await fetch(
       "https://vercelfastfoodapi.vercel.app/fastfood/mcdonalds"
-    ).then((response) => response.json());
+    ).then((response) => response.json())
 
     setUsers(response);
 
@@ -34,15 +34,16 @@ function McDonalds() {
 
     return (
       <div>
-        
-         {users &&
+        a
+        {users &&
         users.map((user) => (
           <div className="item-container" key={user._id}>
             Id: <b> {user.restaurant} </b>  <br/>
-              
+             Restaurant: {user.meniu.map(m => m.nume)} <br/>  
+
           </div>
         ))
-         }  
+         } 
 
 {/* 
 <div className='big-container '>

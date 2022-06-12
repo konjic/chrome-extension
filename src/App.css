@@ -4,13 +4,16 @@
   min-height: 300px;
   max-height: 300px;
 }
-
+h3{
+ background:#f5f5f5;
+ margin: 0; 
+}
 .big-container{
   background:#f5f5f5;
 }
 .flex-container{
   /* background-color:blue; */
-  margin-top:15px;
+  padding-top:15px;
   display:flex;
   align-items: center;
   justify-content:center;
@@ -29,4 +32,34 @@
 .button-glovo{
   background: #ffc244 !important;
   color: white !important;
+}
+
+.menu-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding-bottom: 10px;
+  background: #f5f5f5
+
+}
+
+.buton-mcd{
+  background: #ffff00 !important;
+  color: red !important;
+  margin-left: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.buton-kfc{
+  background: red !important;
+
+}
+
+.buton-tot{
+  margin-bottom: 5px !important;
+}
+
+.buton-bk{
+  margin-left: 5px !important;
+  background: #ff8532 !important;
+  color: white !important
 }
