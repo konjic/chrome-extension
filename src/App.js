@@ -6,6 +6,7 @@ function App() {
   const [users, setUsers] = useState();
   const [meniu, setMeniu] = useState()
 
+
   const getApiData = async () => {
     const response = await fetch(
       "https://vercelfastfoodapi.vercel.app/fastfood/"
@@ -13,7 +14,10 @@ function App() {
 
     setUsers(response);
 
-    setMeniu(response[1].meniu)  // <----------- SAVES VALUES
+    setMeniu(response.map(r => r.meniu))  // <----------- SAVES VALUES
+
+   console.log(meniu)
+
 
   };
 
@@ -21,20 +25,36 @@ function App() {
     getApiData();
   }, []);
 
+
+
+ 
+
+
+
+
   return (
     <div className="App">
 
+      
 
-
- {meniu &&
-        meniu.map((item) => (
-          <div className="item-container">
-            Meniu: {item.nume} <br/>
-            Pret: {item.pret}
+ {users &&
+        users.map((user) => (
+          <div className="item-container" key={user._id}>
+            Id: <b> {user.restaurant} </b>  <br/>
+              
 
           </div>
-        ))} 
+        ))
+         }  
 
+
+{meniu[0].map(item=>(
+  <div>
+<p>{item.nume} {item.pret}</p>
+
+</div>
+         
+       ))}
 
 
     </div>
