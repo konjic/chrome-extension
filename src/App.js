@@ -46,18 +46,62 @@ function App() {
 
     <div className="App">
 
+<div className='big-container'> 
 
-
-{users &&
+ {users &&
         users.map((user) => (
           <div className="item-container" key={user._id}>
-            Id: <b> {user.restaurant} </b>  <br/>
-             Restaurant: {user.meniu.map(m => m.nume)} <br/>  
-            {user.meniu[1].nume}
+             <h3> {user.restaurant}</h3> 
+              {user.meniu.map(m => 
+
+              <div className='flex-container'>
+              {/* <p key={m.nume}> {m.nume} </p>  */}
+
+              <Card sx={{ maxWidth: 250 }}>
+      <CardMedia
+        component="img"
+        height="100"
+        image="https://i.ebayimg.com/images/g/kSAAAOSwX1lilL45/s-l1600.jpg"
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h6" component="div">
+        {m.nume}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        {m.pret} RON
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" className='button-glovo'>Spre Glovo</Button>
+        <Button size="small" className='buton-tazz' >Spre taz</Button>
+        <Button size="small" className='button-foodpanda'>Spre foodpanda</Button>
+      </CardActions>
+    </Card> 
+
+
+
+</div>
+              )} <br/>  
+
+          
+
+              
+
+
+            
           </div>
         ))
          }  
+
          
+</div>
+
+
+      {/* {meniu[0].map(item=>(
+        <div> {item.nume}{item.pret}</div>
+      ))}  */}
+
         
 
 

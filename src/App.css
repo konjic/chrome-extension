@@ -22,16 +22,20 @@ h3{
 .buton-tazz{
   background:#fc1e22 !important;
   color: white !important;
+  font-size: 10px !important;
+  height: 45px !important
 }
 
 .button-foodpanda{
   background: #d70f64 !important;
+  font-size: 10px !important;
   color: white !important;
 }
 
 .button-glovo{
   background: #ffc244 !important;
   color: white !important;
+  font-size: 10px !important;
 }
 
 .menu-container{
@@ -62,4 +66,9 @@ h3{
   margin-left: 5px !important;
   background: #ff8532 !important;
   color: white !important
+}
+
+.MuiCardContent-root .css-46bh2p-MuiCardContent-root{
+  padding-top: 0 !important;
+  padding-bottom:0 !important;
 }
