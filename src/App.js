@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+
 import './App.css';
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [users, setUsers] = useState();
+  const [meniu, setMeniu] = useState()
+
+  const getApiData = async () => {
+    const response = await fetch(
+      "https://vercelfastfoodapi.vercel.app/fastfood/"
+    ).then((response) => response.json());
+
+    setUsers(response);
+
+    setMeniu(response[1].meniu)  // <----------- SAVES VALUES
+
+  };
+
+  useEffect(() => {
+    getApiData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+
+ {meniu &&
+        meniu.map((item) => (
+          <div className="item-container">
+            Meniu: {item.nume} <br/>
+            Pret: {item.pret}
+
+          </div>
+        ))} 
+
+
+
     </div>
   );
 }
