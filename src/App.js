@@ -61,7 +61,7 @@ function App() {
       <CardMedia
         component="img"
         height="100"
-        image="https://i.ebayimg.com/images/g/kSAAAOSwX1lilL45/s-l1600.jpg"
+        image={m.imagine}
         alt="green iguana"
       />
       <CardContent>
@@ -73,9 +73,9 @@ function App() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" className='button-glovo'>Spre Glovo</Button>
-        <Button size="small" className='buton-tazz' >Spre taz</Button>
-        <Button size="small" className='button-foodpanda'>Spre foodpanda</Button>
+        <Button size="small" className='button-glovo' href={m.linkGlovo} target="_blank">Spre Glovo</Button>
+        <Button size="small" className='buton-tazz' href={m.linkTazz} target="_blank">Spre taz</Button>
+
       </CardActions>
     </Card> 
 
